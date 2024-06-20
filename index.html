@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css" />
-    <title>React</title>
+    <title>Food Delivery App</title>
 </head>
 <body>
     <div id = "root">
-
+        <h1>Not rendered</h1><!--Just in case if React doesnt work properly and doesnt get replaced by react 
+            code , thnis will get displayed to show that there is some problem bcz react replaces
+             all the html inside the root if its working fine-->
     </div>
-
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> <!--Core of react-->
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script><!--Library for DOM operations or to modify DOM-->
-    <!--React works on phone and 3D and hence difference functions used in native(mobile) , DOM (browser) etc-->
-    <script src = "./App.js"></script>
+    <script type="module" src = "./src/App.js"></script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+{
+  "name": "reactapp",
+  "version": "1.0.0",
+  "description": "To create React Application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshni-goyal/reactDemo.git"
+  },
+  "author": "Roshni Goyal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roshni-goyal/reactDemo/issues"
+  },
+  "homepage": "https://github.com/roshni-goyal/reactDemo#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
+    "shimmer-effects-react": "^1.0.4"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
