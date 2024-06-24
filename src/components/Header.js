@@ -3,6 +3,7 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 
 const Header = () => {
@@ -13,6 +14,10 @@ const Header = () => {
     const onlineStatus = useOnlineStatus();
 
     const {loggedInUser} = useContext(UserContext);
+
+    //Subscribing to the store using a Selector and what portion of the store ?? we are only subscribing to items of the cart
+    const cartItems = useSelector((store) => store.cart.items);
+    console.log(cartItems);
 
     return (
         <div className="flex justify-between shadow-lg">
@@ -36,10 +41,14 @@ const Header = () => {
                     <li className = "px-4">
                         <Link to = "/grocery">Groceries</Link>
                     </li>
+                    
                     <li className="px-4" onClick={() => {btnName === "Login"
                     ? setbtnName("Logout") 
                     : setbtnName("Login")}}
                     >{btnName}</li>
+                    <li className = "px-4 font-bold">
+                        <Link to = "/cart">Cart ({cartItems.length})</Link>
+                    </li>
                    <li className = "px-4 font-bold">{loggedInUser}</li>
                 </ul>
             </div>
