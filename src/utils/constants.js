@@ -6,8 +6,11 @@ export const LOGO_URL =
 
 
 export const MENU_API = 
-"https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.934816&lng=77.61580500000002&restaurantId=";
+"https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=";
 
 export const RATING_URL=
 "https://icons8.com/icon/enP6M_u0BXV3/rating-circled"
+
+export const DASHBOARD_API = 
+ "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 

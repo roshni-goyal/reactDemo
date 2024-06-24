@@ -1,12 +1,13 @@
+import { useContext } from "react";
 import { CDN_URL , RATING_URL } from "../utils/constants";
-
-const stylecard = {
-    backgroundColor : "#f0f0f0",
-}
+import UserContext from "../utils/UserContext";
 
 const RestaurantCart = (props) => { 
+   
+   const {loggedInUser}= useContext(UserContext);
+
     const {resData} = props;
-    //console.log(props);
+   
     const {
         cloudinaryImageId,
         name,
@@ -36,6 +37,7 @@ const RestaurantCart = (props) => {
             <h4>{costForTwo}</h4>
             <div className="flex">
             <img src="rating.png"/><h4>{avgRating}</h4><span>&bull;</span><h4>{deliveryTime} minutes</h4>
+            <h4>User : {loggedInUser}</h4>
             </div>
         </div>
     )
